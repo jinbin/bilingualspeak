@@ -1,0 +1,8 @@
+<!--pages/my/my.wxml-->
+
+<view class="container">
+  <view class="userinfo">
+      <open-data class="userinfo-avatar" type="userAvatarUrl" background-size="cover"></open-data>
+  </view>
+  <image src="cloud://production-a65b5c.7072-production-a65b5c/images/即兴演讲助手.jpg" style="height: 80px; width: 90%" />
+</view>

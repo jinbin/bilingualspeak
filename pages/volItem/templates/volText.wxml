@@ -1,0 +1,20 @@
+<template name="vol-item">
+  <view class="vol-card">
+    <view wx:if="{{item.hp_img_url}}">
+      <image class="vol-picture" src="{{item.hp_img_url}}" mode="aspectFit"></image>
+    </view>
+    <view wx:else>
+      <image class="vol-picture" src="/image/pictures/Table-Topics.jpg" mode="aspectFit"></image>
+    </view>
+    <view class="vol-meta">
+      <text class="vol-number">{{item.hp_title}}</text>
+    </view>
+    <view class="vol-content">
+      <view class="vol-content-text">
+      {{item.hp_content}}
+      </view>
+    </view>
+    <view class="vol-makettime">
+    </view>
+  </view>
+</template>

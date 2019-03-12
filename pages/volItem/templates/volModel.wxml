@@ -1,0 +1,12 @@
+<template name="vol-item">
+
+  <view wx:if="{{item.hp_model}}">
+    <view wx:for="{{item.hp_model}}">
+      <text style=" width: 100%; font-size: 18px; display: inline-block;">{{item}}</text>
+    </view>
+  </view>
+  <view wx:else>
+    <text style="width: 100%; font-size: 18px;">暂无范文，点击返回</text>
+  </view>
+
+</template>

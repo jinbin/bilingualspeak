@@ -1,0 +1,32 @@
+
+
+
+<swiper class="vol-swiper" current="{{current}}" circular="{{circular}}">
+  <block wx:for="{{vols}}" wx:for-index="idx" wx:key="{{hpcontent_id}}">
+    <swiper-item class="vol-swiper-item" bindtap='rotateFn'>
+      <view wx:if="{{rotate == 1}}">
+        <import src="templates/volText.wxml"/>
+        <view animation="{{animationMain}}">
+          <template is="vol-item" data="{{item: item}}"/>
+        </view>
+      </view>
+      <!--背面的框  -->
+      <view wx:else>
+      <view animation="{{animationMain}}">
+        <import src="templates/volModel.wxml"/>
+        <view animation="{{animationMain}}">
+          <template is="vol-item" data="{{item: item}}"/>
+        </view>
+      </view>
+      </view>
+    </swiper-item>
+
+  </block>
+</swiper>
+
+<view class="bottom">
+  <button bindtap="nextTopic">下一个</button>
+  <button>存图片</button>
+  <button open-type="share">转发</button>
+  <button bindtap="ToMy">我的</button>
+</view>

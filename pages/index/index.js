@@ -455,4 +455,15 @@ Page({
   onHide: function() {
     this.setHistory()
   },
+
+  /**
+  * 用户点击右上角分享
+  */
+  onShareAppMessage: function () {
+    var text = "流式语音翻译,基于微信最新的同声传译技术，快来体验！"
+
+    return {
+      title: text
+    }
+  }
 })

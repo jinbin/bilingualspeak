@@ -1,21 +1,50 @@
 {
-  "pages":[
+  "pages": [
     "pages/volItem/volItem",
+    "pages/mynew/mynew",
+    "pages/category/category",
     "pages/index/index",
-    "pages/my/my",
-    "pages/edit/edit"
+    "pages/mylist/about/about",
+    "pages/mylist/mylist",
+    "pages/my/my"
   ],
   "window": {
-      "backgroundTextStyle": "light",
-      "backgroundColor": "#FAFAFA",
-      "navigationBarBackgroundColor": "#FAFAFA",
-      "navigationBarTitleText": "中文英文语音翻译",
-      "navigationBarTextStyle": "black"
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#00CD00",
+    "navigationBarBackgroundColor": "#00CD66",
+    "navigationBarTitleText": "双语演讲",
+    "navigationBarTextStyle": "black"
   },
+    "tabBar": {
+      "list": [
+        {
+          "pagePath": "pages/volItem/volItem",
+          "iconPath": "./images/tabBar/homepage.png",
+          "selectedIconPath": "./images/tabBar/homepage-sel.png",
+          "text": "首页"
+        },
+        {
+          "pagePath": "pages/mynew/mynew",
+          "iconPath": "images/tabBar/me-sel.png",
+          "selectedIconPath": "images/tabBar/me.png",
+          "text": "我的"
+        }
+      ]
+    },
   "plugins": {
     "WechatSI": {
-      "version": "0.2.2",
+      "version": "0.3.0",
       "provider": "wx069ba97219f66d99"
+    },
+    "tfjsPlugin": {
+      "version": "0.0.5",
+      "provider": "wx6afed118d9e81df9"
     }
-  }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx16c76d4762cbe0b3",
+    "wx18a2ac992306a5a4",
+    "wx16c76d4762cbe0b3"
+  ],
+  "sitemapLocation": "sitemap.json"
 }

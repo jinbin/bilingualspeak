@@ -1,0 +1,10 @@
+<template name="contact_button">
+  <view style="position: fixed; right: 20px; bottom: 20px;">
+  <contact-button 
+    type="default-dark" 
+    size="25"
+    session-from="weapp"
+  >
+  </contact-button>
+  </view>
+</template>

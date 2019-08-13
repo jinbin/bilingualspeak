@@ -63,7 +63,7 @@ page{
     font-size: 14px;
 }
 
-.container {
+/* .container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -71,7 +71,7 @@ page{
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}  */
 
 .userinfo-section {
   display: flex;

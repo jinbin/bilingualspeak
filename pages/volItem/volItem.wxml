@@ -1,32 +1,34 @@
-
-
-
-<swiper class="vol-swiper" current="{{current}}" circular="{{circular}}">
-  <block wx:for="{{vols}}" wx:for-index="idx" wx:key="{{hpcontent_id}}">
-    <swiper-item class="vol-swiper-item" bindtap='rotateFn'>
+<view class="vol-swiper" current="{{current}}" circular="{{circular}}">
+    <swiper-item class="vol-swiper-item" bindtouchstart = "handletouchtart" bindtouchmove="handletouchmove" bindtouchend="handletouchend">
       <view wx:if="{{rotate == 1}}">
         <import src="templates/volText.wxml"/>
         <view animation="{{animationMain}}">
-          <template is="vol-item" data="{{item: item}}"/>
+          <template is="vol-item" data="{{item: vols[current]}}"/>
         </view>
       </view>
       <!--背面的框  -->
       <view wx:else>
-      <view animation="{{animationMain}}">
         <import src="templates/volModel.wxml"/>
-        <view animation="{{animationMain}}">
-          <template is="vol-item" data="{{item: item}}"/>
-        </view>
-      </view>
+          <template is="vol-item" data="{{item: vols[current]}}"/>
       </view>
     </swiper-item>
+</view>
 
-  </block>
-</swiper>
+<view class="bottom" wx:if="{{rotate == 1}}">
+  <view class="box1">
+    <button style="background-color:#87CEFA" bindtap="category">{{type}}</button>
+  </view>
 
-<view class="bottom">
-  <button bindtap="nextTopic">下一个</button>
-  <button>存图片</button>
-  <button open-type="share">转发</button>
-  <button bindtap="ToMy">我的</button>
+  <view class="box1">
+    <button bindtap="rotateFn" wx:if="{{vols[current].hp_model}}">参考范文  </button>
+    <button wx:else>暂无范文</button>
+  </view>
+
+  <view class="box1">
+  <button open-type="share">让TA答</button>
+  </view>
+</view>
+
+<view class="bottom" wx:else>
+  <button bindtap="rotateFn">返回</button>
 </view>

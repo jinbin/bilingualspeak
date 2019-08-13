@@ -46,7 +46,7 @@
 .vol-content-text {
   width: 100%;
   /* min-height: 200rpx; */
-  font-size: 30px;
+  font-size: 20px;
   display: inline-block;
 }
 
@@ -57,12 +57,24 @@
 }
 
 .bottom {
+  /* position: fixed; */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  bottom: 5px;
+  bottom: 10rpx;
   background-color: #F8F8F8;
   align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.box1 {
+  width: 30%;
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 button::after {
@@ -104,3 +116,11 @@ button::after {
   background:tomato;
   transform: rotateY(-180deg);
 }
+
+.button-color {
+  background-color: #00CD66
+}
+
+/* .page {
+  position: fixed;
+} */

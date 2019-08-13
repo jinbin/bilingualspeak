@@ -6,7 +6,7 @@
     </view>
   </view>
   <view wx:else>
-    <text style="width: 100%; font-size: 18px;">暂无范文，点击返回</text>
+    <text style="width: 100%; font-size: 18px;">暂无范文，点击"返回"按钮返回</text>
   </view>
 
 </template>

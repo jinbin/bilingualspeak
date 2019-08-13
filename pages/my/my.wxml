@@ -1,8 +1,26 @@
 <!--pages/my/my.wxml-->
 
 <view class="container">
-  <view class="userinfo">
+  <view class="headline">
+    <view class="userinfo">
       <open-data class="userinfo-avatar" type="userAvatarUrl" background-size="cover"></open-data>
+    </view>
+    <image src="cloud://production-a65b5c.7072-production-a65b5c/images/即兴演讲助手.jpg" style="height: 80px; width: 90%" />
   </view>
-  <image src="cloud://production-a65b5c.7072-production-a65b5c/images/即兴演讲助手.jpg" style="height: 80px; width: 90%" />
+
+  <view style="font-weight:bold;padding-left:20px">使用说明</view>
+  <text style="padding-left:20px">上下滑动更换即兴演讲题目，点击下方"参考范文"获取对应题目的范文。</text>
+
+  <view style="font-weight:bold;padding-left:20px;padding-top:20px;">即兴演讲助手官方微信公众号</view>
+  <p bindtap='copyText' data-text="头马助手Toastmasters Assistant" style="padding-left:20px;color:#8B0000">头马助手Toastmasters Assistant<text decode="true" class="page__desc">（点击复制）</text></p>
+
+  <view style="font-weight:bold;padding-left:20px;padding-top:20px;">合作及建议请加微信</view>
+  <p bindtap='copyText' data-text="just_as_always" style="padding-left:20px;color:#8B0000">just_as_always<text decode="true" class="page__desc">（点击复制）</text></p>
+
+    <view style="font-weight:bold;padding-left:20px;padding-top:20px;">头马小程序推荐</view>
+      <p bindtap='naviTo' data-text="just_as_always" style="padding-left:20px;color:#8B0000">头马助手<text decode="true" class="page__desc">（点击直达）</text></p>
+ 
 </view>
+
+<import src="../../templates/page_ft/page_ft.wxml"/>
+<template is="page_ft" data="{{...page_ft}}" />

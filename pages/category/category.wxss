@@ -1,0 +1,69 @@
+/* pages/category/category.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50rpx;
+  padding: 10rpx;
+}
+
+.window1 {
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10rpx;
+}
+
+.box1 {
+  width: 24%;
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+button::after {
+  border: none;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.downText {
+  font-size:13px;
+  color:#4F4F4F;
+}
+
+.box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx;
+  justify-content: space-around;
+}
+
+.button_green {
+  width: 200rpx;
+  background: #33CC33;
+}
+
+.button {
+  width: 200rpx;
+}
+
+.button-hover{
+  background: black;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 10rpx;
+  padding: 20px;
+}

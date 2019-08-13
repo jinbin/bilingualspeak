@@ -1,0 +1,62 @@
+<!--pages/category/category.wxml-->
+<view class="container">
+  <text style="font-size:15px;padding:20rpx">选择对应分类的即兴演讲题目</text>
+  <view class="window1">
+    <view class="box1">
+      <button wx:if='{{type == "所有"}}' style="background-color:{{bgcolor}}" bindtap="toCate" data-type="所有" data-id='1'>
+        <image style="width:50rpx;height:50rpx" src="../../images/icons/meeting11.png"></image>
+      </button>
+      <button wx:else bindtap="toCate" data-type="所有">
+        <image style="width:50rpx;height:50rpx" src="../../images/icons/meeting11.png"></image>
+      </button>
+      <view class="downText">所有</view>
+    </view>
+
+    <view class="box1">
+      <button wx:if="{{type == '365系列'}}" style="background-color:{{bgcolor}}" bindtap="toCate" data-type="365系列" data-id='2'>
+        <image style="width:50rpx;height:50rpx" src="../../images/icons/meeting14.png"></image>
+      </button>
+      <button wx:else bindtap="toCate" data-type="365系列">
+        <image style="width:50rpx;height:50rpx" src="../../images/icons/meeting14.png"></image>
+      </button>
+      <view class="downText">365系列</view>
+    </view>
+
+    <view class="box1">
+      <button wx:if='{{type == "工作"}}' style="background-color:{{bgcolor}}" bindtap="toCate" data-type="工作">
+        <image style="width:50rpx;height:50rpx" src="../../images/icons/meeting15.png"></image>
+      </button>
+      <button wx:else bindtap="toCate" data-type="工作">
+        <image style="width:50rpx;height:50rpx" src="../../images/icons/meeting15.png"></image>
+      </button>
+      <view class="downText">工作</view>
+    </view>
+
+    <view class="box1">
+      <button wx:if='{{type == "比赛"}}' style="background-color:{{bgcolor}}" bindtap="toCate" data-type="比赛">
+        <image style="width:50rpx;height:50rpx" src="../../images/icons/meeting13.png"></image>      
+      </button>
+      <button wx:else bindtap="toCate" data-type="比赛">
+        <image style="width:50rpx;height:50rpx" src="../../images/icons/meeting13.png"></image>
+      </button>
+      <view class="downText">比赛</view>
+    </view>
+
+    <view class="box1">
+      <button wx:if='{{type == "中文"}}' style="background-color:{{bgcolor}}" bindtap="toCate" data-type="中文">
+        <image style="width:50rpx;height:50rpx" src="../../images/icons/meeting16.png"></image>      
+      </button>
+      <button wx:else bindtap="toCate" data-type="中文">
+        <image style="width:50rpx;height:50rpx" src="../../images/icons/meeting16.png"></image>      
+      </button>
+      <view class="downText">中文</view>
+    </view>
+    
+  </view>
+
+  <view class="page__hd" style="position: fixed; bottom: 20rpx">
+    <ad unit-id="adunit-813951cfbc20472d"></ad>
+  </view>
+</view>
+
+<!-- <ad class="bottom" unit-id="adunit-813951cfbc20472d"></ad> -->

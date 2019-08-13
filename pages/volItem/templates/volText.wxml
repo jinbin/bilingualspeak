@@ -6,9 +6,9 @@
     <view wx:else>
       <image class="vol-picture" src="/image/pictures/Table-Topics.jpg" mode="aspectFit"></image>
     </view>
-    <view class="vol-meta">
+    <!-- <view class="vol-meta">
       <text class="vol-number">{{item.hp_title}}</text>
-    </view>
+    </view> -->
     <view class="vol-content">
       <view class="vol-content-text">
       {{item.hp_content}}

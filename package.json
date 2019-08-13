@@ -1,0 +1,24 @@
+{
+  "name": "face2facetranslator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tencent/Face2FaceTranslator.git"
+  },
+  "author": "Zyaire Jin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tencent/Face2FaceTranslator/issues"
+  },
+  "homepage": "https://github.com/Tencent/Face2FaceTranslator#readme",
+  "dependencies": {
+    "@tensorflow/tfjs-converter": "^1.2.6",
+    "@tensorflow/tfjs-core": "^1.2.6",
+    "fetch-wechat": "0.0.3"
+  }
+}

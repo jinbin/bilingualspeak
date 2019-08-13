@@ -1,0 +1,9 @@
+/* pages/contact/contact.wxss */
+
+.page__desc {
+    margin-top: 5px;
+    color: black;
+    text-align: left;
+    font-size: 14px;
+    position:relative;
+}

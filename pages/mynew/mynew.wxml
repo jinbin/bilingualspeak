@@ -1,0 +1,63 @@
+<!--index.wxml-->
+
+<import src="../../templates/contact_button/contact_button.wxml" />
+
+<view class="container">
+  <view class="userinfo">
+    <open-data class="userinfo-avatar" type="userAvatarUrl" background-size="cover"></open-data>
+  </view>
+  <image bindtap="navigateToMiniProgram" id="wx18a2ac992306a5a4" data-path="pages/apps/largess/detail?id=LYFYxTFDv9E%3D" src="/images/support-min.jpeg" style="height: 80px; width: 100%"/>
+</view>
+
+<official-account></official-account>
+<view wx:if="{{xmad&&xmad.adData&&xmad.ad&&xmad.ad.banner&&xmad.adData  [xmad.ad.banner]&&xmad.adData[xmad.ad.banner].hasshow}}">
+  <view class="xm_banner" style="width:100%">
+    <xm-ad data-id="{{xmad.ad.banner}}" adData="{{xmad.adData}}" bindadload="adImgLoad" bindclick="appoIntView" bindclose="xmadClose" class="xm_component">
+    </xm-ad>
+  </view>
+</view>
+<view wx:else>
+  <view wx:if="{{isAdError}}">
+    <image bindtap="saveOfficialQRCode" style="width:100%" src="cloud://tmassistant-5275ad.746d-tmassistant-5275ad/images/accountpublicity2.jpeg" mode="widthFix"></image>
+  </view>
+  <view wx:else>
+    <ad unit-id="adunit-813951cfbc20472d"></ad>
+  </view>
+  <!-- <view open-type="navigate" bindtap="bindViewTap" > <view style="position: relative; display: flex; width: 100%; overflow: hidden" > <image src="http://aldpicsh-1252823355.cossh.myqcloud.com/ad_advertiser/15614430131992.png" style="width: 100%; margin: 0px auto; height: 91.2715px;"></image> </view> </view> -->
+</view>
+
+<!-- <view class="xm_insert">
+  <xm-ad data-id="{{xmad.ad.insert}}" adData="{{xmad.adData}}" bindadload="adImgLoad" bindclick="appoIntView" bindclose="xmadClose" class="xm_component">
+  </xm-ad>
+</view> -->
+<view class="window">
+  <view class="box" bindtap="navigateTo" id="/pages/mylist/about/about">  
+    <image style="width:80rpx;height:80rpx" src="../../images/setting1.png"></image>
+    <view style="font-size:12px">功能介绍</view>
+  </view>
+  <view class="box" bindtap="saveQRCode" id="images/qrcode.jpg">
+    <image style="width:80rpx;height:80rpx" src="../../images/setting2.png"></image> 
+    <view style="font-size:12px">小程序码</view>
+  </view>
+  <view class="box" bindtap="saveQRCode" id="images/qrcode_for_account.jpg">
+    <image style="width:80rpx;height:80rpx" src="../../images/setting6.png"></image> 
+    <view style="font-size:12px">关注公众号</view>
+  </view>
+  <view class="box" bindtap="linkTA">
+    <image style="width:80rpx;height:80rpx" src="../../images/setting7.png"></image> 
+    <view style="font-size:12px;">关联小程序</view>
+  </view>
+  <view class="box" bindtap="navigateToMiniProgram" id="wx18a2ac992306a5a4" data-path="pages/apps/largess/detail?id=LYFYxTFDv9E%3D">
+    <image style="width:80rpx;height:80rpx" src="../../images/setting3.png"></image> 
+    <view style="font-size:12px;">打赏作者</view>
+  </view>
+  <view class="box" bindtap="navigateToMiniProgram" id="wx16c76d4762cbe0b3">
+    <image style="width:80rpx;height:80rpx" src="../../images/setting4.png"></image> 
+    <view style="font-size:12px;">头马演讲</view>
+  </view>
+</view>
+
+<template is="contact_button" />
+
+<import src="../../templates/page_ft/page_ft.wxml" />
+<template is="page_ft" data="{{...page_ft}}" />

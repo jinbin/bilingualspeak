@@ -1,0 +1,5 @@
+<template name="page_ft">
+  <view class="page__ft" bindtap='fromPageFt'>
+    <view class="weui-footer__text">{{data}}</view>
+  </view>
+</template>

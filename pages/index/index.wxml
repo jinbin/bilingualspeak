@@ -1,71 +1,132 @@
-<!--index.wxml-->
+<swiper class="swiper" style="height: {{banner_height}}%" indicator-dots="false" autoplay="true" interval="5000" duration="1000" circular="true">
+  <block wx:for="{{banners}}">
+    <swiper-item>
+      <image src="{{item.url}}" bindtap="{{item.bind}}" style="width:100%" mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper>
 
-<image class="banner" src="cloud://production-a65b5c.7072-production-a65b5c/images/meeting.jpeg"></image>
+<official-account></official-account>
 
 <view class="container">
-  <view class="title">— 头马 —</view>
-  <view class="box">
+  <image src="https://7072-production-a65b5c-1258290025.tcb.qcloud.la/images/topicscards.jpeg?sign=844ce8b711fc9442ef27b9136e30a18a&t=1566616723" mode="widthFix" style="width:95%; padding-top: 20rpx;"></image>
+</view>
+
+<view class="frame">
+  <view style="width:100%">
+    <!-- <view class="container">
+      <image src="https://7072-production-a65b5c-1258290025.tcb.qcloud.la/images/topicscards.jpeg?sign=1e21e0927a45e9996e12bd18370497c2&t=1566578467" mode="widthFix" style="width:95%; border-radius:25rpx;"></image>
+    </view> -->
+    <form report-submit="true" bindsubmit="getIntro">
+      <view class="window3">
+        <view class="box3">
+          <navigator url="/pages/collection/collection">
+            <image class="icon" src="../../images/topics_color9.png"></image>
+          </navigator>
+          <navigator url="/pages/collection/collection">
+            <view class="downText">全部话题</view>
+          </navigator>
+        </view>
+        <view class="box3" wx:for="{{topics}}" wx:for-index="idx">
+          <navigator url="/pages/topics/topics?label={{item.label}}&id={{item._id}}">
+            <image class="icon" src="../../images/topics_color{{idx}}.png"></image>
+          </navigator>
+          <navigator url="/pages/topics/topics?label={{item.label}}&id={{item._id}}">
+            <view class="downText">{{item.label}}</view>
+          </navigator>
+        </view>
+      </view>
+    </form>
   </view>
 </view>
 
-<view class='line'></view>
+<!-- <view class="line"></view> -->
 
-<view class="container">
-  <view class="title">— Pathways —</view>
-  <view class="box">
-    <view class="item" style="color:Orange">
-      <text>阶段一</text>
-      <text style="font-size: 10px">夯实基础</text>
-    </view>
-    <view class="item" style="color:ForestGreen">
-      <text>阶段二</text>
-      <text style="font-size: 10px">学习风格</text>
-    </view>
-    <view class="item" style="color:DarkCyan">
-      <text>阶段三</text>
-      <text style="font-size: 10px">丰富知识</text>
-    </view>
-    <view class="item" style="color:red">
-      <text>阶段四</text>
-      <text style="font-size: 10px">培养技能</text>
-    </view>
-    <view class="item" style="color:purple">
-      <text>阶段五</text>
-      <text style="font-size: 10px">专业展示</text>
-    </view>
+<view>
+  <view class="container"> 
+    <image src="https://7072-production-a65b5c-1258290025.tcb.qcloud.la/images/topicskills_small.jpeg?sign=0e3bd466cff3a9e6629983c7d4361954&t=1566629426" mode="widthFix" style="width:95%; border-radius:25rpx;"></image>
   </view>
+  <form report-submit="true" bindsubmit="getIntro">
+    <view class="window3" style="padding:10rpx;">
+      <view class="box3" style="">
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/dH59jW_WnQ2OIm8LfHdF2g">
+          <image class="icon" src="../../images/知识库.png"></image>
+        </navigator>
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/dH59jW_WnQ2OIm8LfHdF2g">
+          <view class="downText" style="color:#9d441b;">即兴技巧</view>
+        </navigator>
+      </view>
+      <!-- <view class="box3" style="">
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/gVUuksupo7Fv2kzTAFlmPQ">
+          <image class="icon" src="../../images/blocks2.png"></image>
+        </navigator>
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/gVUuksupo7Fv2kzTAFlmPQ">
+          <view class="downText" style="color:#1E90FF;">即兴脚本</view>
+        </navigator>
+      </view> -->
+      <view class="box3" style="">
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/_t-FhuLXs3qEEEnJuZL4BQ">
+          <image class="icon" src="../../images/matrix.png"></image>
+        </navigator>
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/_t-FhuLXs3qEEEnJuZL4BQ">
+          <view class="downText">即兴脚本</view>
+        </navigator>
+      </view>
+      <view class="box3" style="">
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/lGgxKJDSNRfza8ZDZ-l9LA">
+          <image class="icon" src="../../images/blocks1.png"></image>
+        </navigator>
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/lGgxKJDSNRfza8ZDZ-l9LA">
+          <view class="downText">主持必备</view>
+        </navigator>
+      </view>
+      <!-- <view class="box3" style="">
+        <button id="toumayanjiang" size="mini" style="" formType="submit">
+          <image class="icon" src="../../images/小程序.png"></image>
+        </button>
+        <view class="downText">头马演讲</view>
+      </view> -->
+    </view>
+  </form>
 </view>
 
-<view class='line'></view>
-
-<view class="container">
-  <view class="title">— 会议角色介绍 —</view>
-  <view class="main_box">
-    <view class="box">
-      <text class="item" style="color:Orange;width:200rpx;">时间官</text>
-      <text class="item" style="color:DarkCyan;width:200rpx;">语法官</text>
-      <text class="item" style="color:ForestGreen;width:200rpx;">哼哈官</text>
-    </view>
-    <view class="box">
-      <text class="item" style="color:Orange;width:200rpx;">主持人</text>
-      <text class="item" style="color:DarkCyan;width:200rpx;">即兴主持</text>
-      <text class="item" style="color:ForestGreen;width:200rpx;">总评</text>
-    </view>
-    <view class="box">
-      <text class="item" style="color:Orange;width:200rpx;">即兴评估</text>
-      <text class="item" style="color:DarkCyan;width:200rpx;">个人评估</text>
-      <text class="item" style="color:ForestGreen;width:200rpx;">接待官</text>
-    </view>
+<view>
+  <view class="container"> 
+    <image src="/images/topicsvideo-min.jpeg" mode="widthFix" style="width:95%; border-radius:25rpx;"></image>
   </view>
+  <form report-submit="true" bindsubmit="getIntro">
+    <view class="window3" style="padding:10rpx;">
+      <view class="box3" style="">
+        <navigator url="/pages/web/web?src=http://mp.weixin.qq.com/s/4H2wxfiDIVSSZGN8hzIKHg">
+          <image class="icon" src="../../images/视频.png"></image>
+        </navigator>
+        <navigator url="/pages/web/web?src=http://mp.weixin.qq.com/s/4H2wxfiDIVSSZGN8hzIKHg">
+          <view class="downText" style="color:#9d441b;">即兴主持</view>
+        </navigator>
+      </view>
+      <!-- <view class="box3" style="">
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/_t-FhuLXs3qEEEnJuZL4BQ">
+          <image class="icon" src="../../images/matrix.png"></image>
+        </navigator>
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/_t-FhuLXs3qEEEnJuZL4BQ">
+          <view class="downText">即兴脚本</view>
+        </navigator>
+      </view>
+      <view class="box3" style="">
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/lGgxKJDSNRfza8ZDZ-l9LA">
+          <image class="icon" src="../../images/blocks1.png"></image>
+        </navigator>
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/lGgxKJDSNRfza8ZDZ-l9LA">
+          <view class="downText">即兴主持</view>
+        </navigator>
+      </view> -->
+    </view>
+  </form>
 </view>
 
-<view class='line'></view>
-
-<view class="container">
-  <view class="title">— 演讲技巧 —</view>
-  <view class="text_block">
-    <view wx:for="texts" wx:for-index="key">
-      <text class="textLink">{{texts[key]}}</text>
-    </view>
+<navigator target="miniProgram" app-id="wx16c76d4762cbe0b3">
+  <view class="container" style="padding-bottom: 25rpx">
+    <image src="/images/toumaAssistant.jpeg" mode="widthFix" style="width:100%" style="width:95%; border-radius:25rpx;">
+    </image>
   </view>
-</view>
+</navigator>

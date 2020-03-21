@@ -1,0 +1,13 @@
+<official-account></official-account>
+
+<swiper style="height: {{clientHeight?clientHeight+'px':'auto'}}" indicator-dots="true" class="vol-swiper" current="{{current}}" bindchange="handleChange">
+  <block wx:for="{{vols}}" wx:for-index="idx" wx:key="{{hpcontent_id}}">
+    <swiper-item class="vol-swiper-item">
+      <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}" bindscrolltolower="scrollbot">
+      
+        <import src="templates/volText.wxml"/>
+        <template is="vol-item" data="{{item: item}}"/>
+      </scroll-view>
+    </swiper-item>
+  </block>
+</swiper>

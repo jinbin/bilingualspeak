@@ -1,0 +1,71 @@
+<!--index.wxml-->
+
+<image class="banner" src="cloud://production-a65b5c.7072-production-a65b5c/images/meeting.jpeg"></image>
+
+<view class="container">
+  <view class="title">— 头马 —</view>
+  <view class="box">
+  </view>
+</view>
+
+<view class='line'></view>
+
+<view class="container">
+  <view class="title">— Pathways —</view>
+  <view class="box">
+    <view class="item" style="color:Orange">
+      <text>阶段一</text>
+      <text style="font-size: 10px">夯实基础</text>
+    </view>
+    <view class="item" style="color:ForestGreen">
+      <text>阶段二</text>
+      <text style="font-size: 10px">学习风格</text>
+    </view>
+    <view class="item" style="color:DarkCyan">
+      <text>阶段三</text>
+      <text style="font-size: 10px">丰富知识</text>
+    </view>
+    <view class="item" style="color:red">
+      <text>阶段四</text>
+      <text style="font-size: 10px">培养技能</text>
+    </view>
+    <view class="item" style="color:purple">
+      <text>阶段五</text>
+      <text style="font-size: 10px">专业展示</text>
+    </view>
+  </view>
+</view>
+
+<view class='line'></view>
+
+<view class="container">
+  <view class="title">— 会议角色介绍 —</view>
+  <view class="main_box">
+    <view class="box">
+      <text class="item" style="color:Orange;width:200rpx;">时间官</text>
+      <text class="item" style="color:DarkCyan;width:200rpx;">语法官</text>
+      <text class="item" style="color:ForestGreen;width:200rpx;">哼哈官</text>
+    </view>
+    <view class="box">
+      <text class="item" style="color:Orange;width:200rpx;">主持人</text>
+      <text class="item" style="color:DarkCyan;width:200rpx;">即兴主持</text>
+      <text class="item" style="color:ForestGreen;width:200rpx;">总评</text>
+    </view>
+    <view class="box">
+      <text class="item" style="color:Orange;width:200rpx;">即兴评估</text>
+      <text class="item" style="color:DarkCyan;width:200rpx;">个人评估</text>
+      <text class="item" style="color:ForestGreen;width:200rpx;">接待官</text>
+    </view>
+  </view>
+</view>
+
+<view class='line'></view>
+
+<view class="container">
+  <view class="title">— 演讲技巧 —</view>
+  <view class="text_block">
+    <view wx:for="texts" wx:for-index="key">
+      <text class="textLink">{{texts[key]}}</text>
+    </view>
+  </view>
+</view>

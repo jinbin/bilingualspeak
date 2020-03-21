@@ -1,0 +1,44 @@
+<!--pages/contact/contact.wxml-->
+<official-account></official-account>
+
+<view class="page">
+  <view class="page__hd">
+    <view class="summary__title">合作交流</view>
+    <text decode="true" class="page__desc">
+          金斌/Zyaire (头衔: CL, IP3)
+          2018.04—至今: 杭州西子双语演讲俱乐部会员
+          2018.07—2018.12: 担任西子俱乐部教育副主席
+          2019.01—2019.12: 担任西子俱乐部主席
+          </text>
+    <text decode="true" class="page__desc">
+          头马助手官方微信公众号:
+          </text>
+    <p bindtap='copyText' data-text="头马演讲助手" style="color:#8B0000">头马演讲助手
+      <text decode="true" class="page__desc">（点击复制）</text>
+    </p>
+    <text decode="true" class="page__desc">
+          头马演讲:
+          </text>
+    <p bindtap='naviTo' style="color:#8B0000">头马演讲
+      <text decode="true" class="page__desc">（点击直达）</text>
+    </p>
+    <text decode="true" class="page__desc">
+          合作及建议请加微信:
+          </text>
+    <p bindtap='saveOfficialQRCode' data-text="just_as_always" style="color:#8B0000">作者微信
+      <text decode="true" class="page__desc">（点击复制）</text>
+    </p>
+    <text decode="true" class="page__desc">
+          欢迎打赏:
+          </text>
+    <p bindtap='dashang' data-text="可能性工作室" style="color:#8B0000">打赏作者</p>
+    <text decode="true" class="page__desc">
+          个人微信公众号:
+          </text>
+    <p bindtap='copyText' data-text="可能性工作室" style="color:#8B0000">可能性工作室
+      <text decode="true" class="page__desc">（点击复制）</text>
+    </p>
+    <!-- <ad style="padding-top: 30rpx" unit-id="adunit-813951cfbc20472d"></ad> -->
+    <ad unit-id="adunit-79515989b08573d4" ad-type="video" ad-theme="white"></ad>
+  </view>
+</view>

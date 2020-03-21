@@ -1,0 +1,40 @@
+<!--pages/knowledge/knowledge.wxml-->
+<!-- <swiper class="swiper" style="height: {{banner_height}}%" indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true">
+  <block wx:for="{{banners}}">
+    <swiper-item>
+      <image src="{{item.url}}" bindtap="{{item.bind}}" class="banner" mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper> -->
+
+<official-account></official-account>
+
+<view class="container">
+  <image src="https://7072-production-a65b5c-1258290025.tcb.qcloud.la/images/topicscards.jpeg?sign=844ce8b711fc9442ef27b9136e30a18a&t=1566616723" mode="widthFix" style="width:95%; padding-top: 20rpx;"></image>
+</view>
+
+<view class="frame">
+  <view style="width:100%">
+    <!-- <view class="title">#即兴话题#</view> -->
+    <form report-submit="true" bindsubmit="getIntro">
+      <view class="window3">
+        <view class="box3" wx:for="{{topics}}" wx:for-index="idx">
+          <navigator url="/pages/topics/topics?label={{item.label}}&id={{item._id}}">
+            <image class="icon" src="../../images/topics_color{{idx % 10}}.png"></image>
+          </navigator>
+          <navigator url="/pages/topics/topics?label={{item.label}}&id={{item._id}}">
+            <view class="downText">{{item.label}}</view>
+          </navigator>
+        </view>
+      </view>
+    </form>
+  </view>
+</view>
+
+<view class="container">
+  <navigator open-type="switchTab" url="/pages/index/index">
+    <button size="mini" type="primary" style="font-size:30rpx">
+      返回首页
+    </button>
+  </navigator>
+</view>

@@ -22,6 +22,7 @@
   </view>
   <view wx:else>
     <ad unit-id="adunit-813951cfbc20472d"></ad>
+    <!-- <ad unit-id="adunit-79515989b08573d4" ad-type="video" ad-theme="white"></ad> -->
   </view>
   <!-- <view open-type="navigate" bindtap="bindViewTap" > <view style="position: relative; display: flex; width: 100%; overflow: hidden" > <image src="http://aldpicsh-1252823355.cossh.myqcloud.com/ad_advertiser/15614430131992.png" style="width: 100%; margin: 0px auto; height: 91.2715px;"></image> </view> </view> -->
 </view>
@@ -34,6 +35,10 @@
   <view class="box" bindtap="navigateTo" id="/pages/mylist/about/about">  
     <image style="width:80rpx;height:80rpx" src="../../images/setting1.png"></image>
     <view style="font-size:12px">功能介绍</view>
+  </view>
+  <view class="box" bindtap="navigateTo" id="/pages/mylist/intro/intro">  
+    <image style="width:80rpx;height:80rpx" src="../../images/setting5.png"></image>
+    <view style="font-size:12px">作者介绍</view>
   </view>
   <view class="box" bindtap="saveQRCode" id="images/qrcode.jpg">
     <image style="width:80rpx;height:80rpx" src="../../images/setting2.png"></image> 

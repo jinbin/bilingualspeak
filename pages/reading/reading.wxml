@@ -1,0 +1,23 @@
+<!--pages/reading/reading.wxml-->
+
+<view class="container1">
+  <image bindtap="saveOfficialQRCode" style="width:100%" src="https://746d-tmassistant-5275ad-1258071577.tcb.qcloud.la/images/guesslike.jpeg?sign=a3eb1ca003a1079a467350b8a6572182&t=1564386974" mode="widthFix"></image>
+</view>
+
+<view class="cards" id="cards">
+
+  <view wx:for="{{articles}}">
+    <view class="line" style="background-color: #F8F8F8"></view>
+
+    <view class="card">
+      <view class="card_text">
+        <navigator url="/pages/testdb/testdb?src={{item.src}}">
+          {{item.title}}
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+  <view class="line" style="background-color: #F8F8F8"></view>
+
+</view>

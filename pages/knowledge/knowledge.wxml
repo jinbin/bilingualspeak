@@ -1,0 +1,63 @@
+<!--pages/knowledge/knowledge.wxml-->
+<swiper class="swiper" style="height: {{banner_height}}%" indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true">
+  <block wx:for="{{banners}}">
+    <swiper-item>
+      <image src="{{item.url}}" bindtap="{{item.bind}}" class="banner" mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<official-account></official-account>
+
+<view>
+  <form report-submit="true" bindsubmit="getIntro">
+    <view class="window3" style="padding:10rpx;">
+      <view class="box3" style="">
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/lGgxKJDSNRfza8ZDZ-l9LA">
+          <image style="width:100rpx;height:100rpx" src="../../images/blocks1.png"></image>
+        </navigator>
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/lGgxKJDSNRfza8ZDZ-l9LA">
+         <view class="downText">即兴主持必读</view>
+        </navigator>
+      </view>
+      <view class="box3" style="">
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/cXyYOR6AAnBHmC2EU5bR1Q">
+          <image style="width:100rpx;height:100rpx" src="../../images/知识库.png"></image>
+        </navigator>
+        <navigator url="/pages/web/web?src=https://mp.weixin.qq.com/s/cXyYOR6AAnBHmC2EU5bR1Q">
+          <view class="downText" style="color:#9d441b;">即兴演讲技巧</view>
+        </navigator>
+      </view>
+      <!-- <view class="box3" style="">
+        <button id="guess" size="mini" style="" formType="submit">
+          <image style="width:100rpx;height:100rpx" src="../../images/guess.png"></image>
+        </button>
+        <view class="downText">精彩文章</view>
+      </view> -->
+      <view class="box3" style="">
+        <button id="script" size="mini" style="" formType="submit">
+          <image style="width:100rpx;height:100rpx" src="../../images/blocks2.png"></image>
+        </button>
+        <view class="downText" style="color:#1E90FF;">即兴演讲脚本</view>
+      </view>
+      <view class="box3" style="">
+        <button id="applyscript" size="mini" style="" formType="submit">
+          <image style="width:100rpx;height:100rpx" src="../../images/matrix.png"></image>
+        </button>
+        <view class="downText">即兴脚本实战</view>
+      </view>
+      <!-- <view class="box3" style="">
+        <button id="collection" size="mini" style="" formType="submit">
+          <image style="width:100rpx;height:100rpx" src="../../images/topic_sel.png"></image>
+        </button>
+        <view class="downText">话题大全</view>
+      </view> -->
+      <view class="box3" style="">
+        <button id="toumayanjiang" size="mini" style="" formType="submit">
+          <image style="width:100rpx;height:100rpx" src="../../images/小程序.png"></image>
+        </button>
+        <view class="downText">头马演讲</view>
+      </view>
+    </view>
+  </form>
+</view>

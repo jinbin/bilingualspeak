@@ -11,6 +11,16 @@ module.exports = [
     ]
   },
   {
+    hp_content: 'Do you like to go and stay in the same place for the whole vacation, or different places and spend short time at each place for your vacation?',
+    hp_img_url: '',
+    hp_model: [
+      'I like this topic, it’s about vacation and everyone likes vacation. When I was young, on my vacation I was always trying to go to as many places as possible because I want to see all the beautiful sceneries, all the wonderful places and I don't wanna miss a single place. However, when I grow older, I change my mind that I believe that staying in the same place for the whole vacation will lead to a better experience.',
+      'First, we must remember the purpose of vacation. It’s not about showing off for how many places we have been to, it’s about having a good rest, relaxing yourself and regaining energy. Staying in the same place saves us a lot of time on traffic and we won’t feel pushed to go to different places.',
+      'Secondly, staying in the same place gives us enough time to feel every wonderful detail in travel. You can see the sun rise and sun set of the same city. You can find out the best restaurant and have a wonderful delicious meal there. You have enough time to talk with local residents about their daily life. If you choose to spend short time at different places, probably you have only time to take picture. You can’t have a deep understanding of local lifestyle.',
+      'Moreover, those places we haven’t been to is not a pity, but a motivation that can attract us to back again. In a word, staying in the same place for the whole vacation will be a better choice.'
+    ]
+  },
+  {
     hp_content:
       'What places you never visited before do you want to visit most?',
     hp_img_url: '/image/pictures/places.jpg',
@@ -1899,7 +1909,7 @@ module.exports = [
   },
   {
     hp_content:
-      '308. What music do you listen to to lift your spirits when you?re feeling down?',
+      '308. What music do you listen to to lift your spirits when you\'re feeling down?',
     hp_img_url: '',
     type: '365'
   },
@@ -1920,7 +1930,7 @@ module.exports = [
     type: '365'
   },
   {
-    hp_content: '312. Who was the last person you said ?I love you? to?',
+    hp_content: '312. Who was the last person you said \'I love you\' to?',
     hp_img_url: '',
     type: '365'
   },
@@ -2072,7 +2082,7 @@ module.exports = [
     type: '365'
   },
   {
-    hp_content: '341. What?s something you wish you had done earlier in life?',
+    hp_content: '341. What\'s something you wish you had done earlier in life?',
     hp_img_url: '',
     type: '365'
   },
@@ -2094,7 +2104,7 @@ module.exports = [
   },
   {
     hp_content:
-      '345. What?s a quick decision you once made that changed your life?',
+      '345. What\'s a quick decision you once made that changed your life?',
     hp_img_url: '',
     type: '365'
   },
@@ -2141,7 +2151,7 @@ module.exports = [
     type: '365'
   },
   {
-    hp_content: '354. Where do you spend most of your time while you?re awake?',
+    hp_content: '354. Where do you spend most of your time while you\'re awake?',
     hp_img_url: '',
     type: '365'
   },
@@ -2245,4 +2255,9 @@ module.exports = [
     hp_img_url: '',
     type: 'cn'
   },
+  {
+    hp_content: 'What\'s your favorite educational organization online or below-the-line and why ?',
+    hp_img_url: '',
+    type: ''
+  }
 ];

@@ -1,50 +1,55 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/oldindex/index",
     "pages/volItem/volItem",
+    "pages/collection/collection",
+    "pages/topicsView/volItem",
+    "pages/topics/topics",
+    "pages/knowledge/knowledge",
+    "pages/mylist/about/about",
+    "pages/mylist/intro/intro",
     "pages/mynew/mynew",
     "pages/category/category",
-    "pages/index/index",
-    "pages/mylist/about/about",
     "pages/mylist/mylist",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/web/web",
+    "pages/reading/reading"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "backgroundColor": "#00CD00",
+    "backgroundColor": "#F8F8F8",
     "navigationBarBackgroundColor": "#00CD66",
     "navigationBarTitleText": "双语演讲",
     "navigationBarTextStyle": "black"
   },
-    "tabBar": {
-      "list": [
-        {
-          "pagePath": "pages/volItem/volItem",
-          "iconPath": "./images/tabBar/homepage.png",
-          "selectedIconPath": "./images/tabBar/homepage-sel.png",
-          "text": "首页"
-        },
-        {
-          "pagePath": "pages/mynew/mynew",
-          "iconPath": "images/tabBar/me-sel.png",
-          "selectedIconPath": "images/tabBar/me.png",
-          "text": "我的"
-        }
-      ]
-    },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./images/tabBar/miniprogram.png",
+        "selectedIconPath": "./images/tabBar/miniprogram-sel.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/volItem/volItem",
+        "iconPath": "./images/tabBar/homepage.png",
+        "selectedIconPath": "./images/tabBar/homepage-sel.png",
+        "text": "题目"
+      },
+      {
+        "pagePath": "pages/mynew/mynew",
+        "iconPath": "images/tabBar/me-sel.png",
+        "selectedIconPath": "images/tabBar/me.png",
+        "text": "我的"
+      }
+    ]
+  },
   "plugins": {
-    "WechatSI": {
-      "version": "0.3.0",
-      "provider": "wx069ba97219f66d99"
-    },
-    "tfjsPlugin": {
-      "version": "0.0.5",
-      "provider": "wx6afed118d9e81df9"
-    }
   },
   "navigateToMiniProgramAppIdList": [
     "wx16c76d4762cbe0b3",
-    "wx18a2ac992306a5a4",
-    "wx16c76d4762cbe0b3"
+    "wx18a2ac992306a5a4"
   ],
   "sitemapLocation": "sitemap.json"
 }

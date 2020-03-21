@@ -1,0 +1,16 @@
+<template name="vol-item">
+  <view class="vol-card">
+    <image class="vol-picture" src="{{item.hp_img_url}}" mode="aspectFit"></image>
+    <!-- <view class="vol-meta">
+      <text class="vol-number">{{item.hp_title}}</text>
+    </view> -->
+    <view class="vol-content">
+      <text class="vol-content-text">{{item.hp_content}}</text>
+      <!-- <text class="vol-content-text">Hello1 We川大小程序[scuplus] 使用wepy开发的完善的校园综合小程序, 40+页面，前后端开源，包括成绩、课表、失物招领、图书馆、新闻资讯等等常见校园场景功能</text> -->
+    </view>
+    <!-- <view class="vol-makettime"> -->
+      <!-- <text class="vol-makettime-text">{{item.hp_makettime}}</text> -->
+      <!-- <text class="vol-makettime-text">World1</text> -->
+    <!-- </view> -->
+  </view>
+</template>

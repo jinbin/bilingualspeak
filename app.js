@@ -6,6 +6,11 @@ App({
   },
 
   onLaunch: function(){
+    wx.cloud.init({
+      traceUser: true,
+      env: 'production-a65b5c'
+    })
+    
     this.globalData.cateType = wx.getStorageSync("cateTypeSet") || "所有"
     console.log(this.globalData.cateType)
     // wx.getStorage({

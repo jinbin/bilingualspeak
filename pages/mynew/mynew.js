@@ -111,7 +111,7 @@ Page({
       success: function (res) {
         if (res.confirm) {
           wx.setClipboardData({
-            data: "wx16c76d4762cbe0b3",
+            data: "中英双语演讲",
             success: function (res) {
               wx.showToast({
                 title: "名称已复制"
@@ -295,14 +295,12 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title: '头马助手, 专注中英文双语演讲, 2万名终身学习者的选择',
-      imageUrl: '/images/indexforward-min.jpg'
+      title: '双语演讲, 专注中英文双语演讲, 超过2万名终身学习者的选择',
+      imageUrl: '/images/jixing-big-min.jpeg'
     }
   },
 
   fromPageFt: function () {
-    wx.navigateToMiniProgram({
-      appId: this.data.tt_appId
-    })
+    util.saveOfficialQRCode("可能性工作室")
   }
 })

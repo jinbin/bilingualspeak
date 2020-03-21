@@ -2,6 +2,9 @@
 import util from '../../utils/util.js'
 
 const app = getApp()
+const db = wx.cloud.database({
+  env: "production-a65b5c"
+})
 
 Page({
   data: {
@@ -123,30 +126,87 @@ Page({
     })
   },
 
+  goToRecord: function() {
+    util.giveTip("紧张开发中，敬请期待！")
+  },
+
   onLoad: function(options) {
-    // 为了避免底部按钮遮挡
-    for (var i = 0; i < this.data.vols.length; i++) {
-      // console.log(this.data.vols[i]["hp_model"])
-      if (this.data.vols[i]["hp_model"]) {
-        var num = 4
-        while (num > 0) {
-          this.data.vols[i]["hp_model"].push("")
-          num = num - 1
+
+    var that = this
+    db.collection("topics").get({
+      success: function(res) {
+        console.log(res.data)
+        that.setData({
+          topics: res.data.reverse(),
+        })
+
+        console.log("option id: " + options.id)
+        console.log("option type: " + options.type)
+        // 为了避免底部按钮遮挡
+        for (var i = 0; i < this.data.vols.length; i++) {
+          // console.log(this.data.vols[i]["hp_model"])
+          if (this.data.vols[i]["hp_model"]) {
+            var num = 4
+            while (num > 0) {
+              this.data.vols[i]["hp_model"].push("")
+              num = num - 1
+            }
+          }
         }
+        // console.log(this.data.vols)
+        // 若传入的id 和 type 不匹配，则会产生bug
+        if (options.id) {
+          this.setData({
+            current: parseInt(options.id),
+            vols: this.data.vols
+          })
+          app.globalData.cateType = options.type
+          wx.setStorageSync('cateTypeSet', app.globalData.cateType)
+
+          if (app.globalData.cateType == "所有") {
+            this.setData({
+              vols: require('../../data/vols')
+            })
+          } else {
+            var key_pairs = {
+              "365系列": "365",
+              "工作": "work",
+              "比赛": "competition",
+              "中文": "cn"
+            }
+            let selected = []
+            for (var i = 0; i < this.data.vols.length; i++) {
+              if (this.data.vols[i]["type"] == key_pairs[app.globalData.cateType]) {
+                selected.push(this.data.vols[i])
+              }
+            }
+            console.log("题库数量: " + selected.length)
+
+            if (selected.length != 0) {
+              console.log(selected)
+              this.setData({
+                vols: selected
+              })
+            }
+
+            if (parseInt(options.id) >= selected.length) {
+              this.setData({
+                current: Math.floor(Math.random() * this.data.vols.length)
+              })
+            }
+          }
+
+        } else {
+          this.setData({
+            current: Math.floor(Math.random() * this.data.vols.length),
+            vols: this.data.vols
+          })
+          app.globalData.cateType = "所有"
+          wx.setStorageSync('cateTypeSet', app.globalData.cateType)
+        }
+
       }
-    }
-    // console.log(this.data.vols)
-    if(options.id){
-      this.setData({
-        current: parseInt(options.id),
-        vols: this.data.vols
-      })
-    }else{
-      this.setData({
-        current: Math.floor(Math.random() * this.data.vols.length),
-        vols: this.data.vols
-      })
-    }
+    })
   },
 
   getVols: function(idList) {
@@ -180,8 +240,15 @@ Page({
     var cateTypeSet_in_store = wx.getStorageSync('cateTypeSet')
 
     // 分类未改变，则不用刷新展示题库
-    if (cateTypeSet_in_store == app.globalData.cateType){
+    if (cateTypeSet_in_store == app.globalData.cateType) {
+      console.log(app.globalData.cateType)
+      console.log(this.data.type)
+      console.log("不刷新")
+      this.setData({
+        type: app.globalData.cateType
+      })
     } else {
+      console.log("刷新")
       // 分类改变，刷新展示题库
       wx.setStorageSync('cateTypeSet', app.globalData.cateType)
 
@@ -192,68 +259,38 @@ Page({
 
       console.log(this.data.vols)
 
-      var key_pairs = { 
-        "365系列": "365", 
-        "工作": "work", 
-        "比赛": "competition", 
-        "中文": "cn"
-      }
+      if (app.globalData.cateType == "所有") {
 
-      let selected = []
-      for (var i = 0; i < this.data.vols.length; i++) {
-        if (this.data.vols[i]["type"] == key_pairs[app.globalData.cateType]) {
-          selected.push(this.data.vols[i])
+      } else {
+        var key_pairs = {
+          "365系列": "365",
+          "工作": "work",
+          "比赛": "competition",
+          "中文": "cn"
         }
-      }
-      console.log("题库数量: " + selected.length)
-      
-      /*
-      if (app.globalData.cateType == "365系列") {
-        for (var i = 0; i < this.data.vols.length; i++) {
-          if (this.data.vols[i]["type"] == "365") {
-            selected.push(this.data.vols[i])
-          }
-        }
-        console.log("题库数量: " + selected.length)
-      } else if (app.globalData.cateType == "工作") {
-        for (var i = 0; i < this.data.vols.length; i++) {
-          if (this.data.vols[i]["type"] == "work") {
-            selected.push(this.data.vols[i])
-          }
-        }
-        console.log("题库数量: " + selected.length)
-      } else if (app.globalData.cateType == "比赛") {
-        console.log(this.data.vols.length)
-        for (var i = 0; i < this.data.vols.length; i++) {
-          if (this.data.vols[i]["type"] == "competition") {
-            selected.push(this.data.vols[i])
-          }
-        }
-        console.log("题库数量: " + selected.length)
-      } else if (app.globalData.cateType == "中文") {
-        console.log(this.data.vols.length)
-        for (var i = 0; i < this.data.vols.length; i++) {
-          if (this.data.vols[i]["type"] == "cn") {
-            selected.push(this.data.vols[i])
-          }
-        }
-        console.log("题库数量: " + selected.length)
-      }
-      */
 
-      if (selected.length != 0) {
-        console.log(selected)
+        let selected = []
+        for (var i = 0; i < this.data.vols.length; i++) {
+          if (this.data.vols[i]["type"] == key_pairs[app.globalData.cateType]) {
+            selected.push(this.data.vols[i])
+          }
+        }
+        console.log("题库数量: " + selected.length)
+
+        if (selected.length != 0) {
+          console.log(selected)
+          this.setData({
+            vols: selected
+          })
+        }
+
+        // 经典bug
         this.setData({
-          vols: selected
+          current: Math.floor(Math.random() * this.data.vols.length)
         })
+
+        console.log("题库数量: " + this.data.vols.length)
       }
-
-      // 经典bug
-      this.setData({
-        current: Math.floor(Math.random() * this.data.vols.length)
-      })
-
-      console.log("题库数量: " + this.data.vols.length)
     }
 
     //wx.setStorageSync('cateTypeSet', options.target.dataset.type)
@@ -310,10 +347,12 @@ Page({
   },
 
   onShareAppMessage: function() {
+    console.log("分享的id: " + this.data.current)
+    console.log("分享的type: " + app.globalData.cateType)
     return {
       title: "给你出的即兴题目: " + this.data.vols[this.data.current]["hp_content"],
       // imageUrl: '/images/whytm.jpg'
-      path: '/pages/volItem/volItem?id=' + this.data.current
+      path: '/pages/volItem/volItem?id=' + this.data.current + '&type=' + app.globalData.cateType
     }
   }
 })

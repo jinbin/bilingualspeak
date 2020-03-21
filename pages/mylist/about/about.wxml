@@ -1,52 +1,35 @@
 <!--pages/contact/contact.wxml-->
 <official-account></official-account>
 
-<!--pages/contact/contact.wxml-->
-<official-account></official-account>
-
 <view class="page">
   <view class="page__hd">
-    <view class="summary__title">使用说明</view>
+    <view class="summary__title">即兴演讲 impromptu speech</view>
     <text decode="true" class="page__desc">
-      上下滑动更换即兴演讲题目，随时随地锻炼，点击下方"参考范文"获取对应题目的范文。
+      你的学习和努力，已经让你有了很好的积累
+      如果在每一个关键时刻，不能真实、清晰的表达出来，会让你的努力大打折扣
+      即兴演讲可以成为改变你输出的利器
+
+      这是个即兴的新时代
+      我们不一定有很多正式演讲的机会
+      却每天都有自然、自发的即兴时刻
+      哪柏只有3分钟，都足以决定了别人眼中的你
     </text>
   </view>
+
   <view class="page__hd">
-    <view class="summary__title">合作交流</view>
+    <view class="summary__title">使用说明 User Manual</view>
     <text decode="true" class="page__desc">
-          金斌/Zyaire (头衔: CL, IP3)
-          2018.04—至今: 杭州西子双语演讲俱乐部会员
-          2018.07—2018.12: 担任西子俱乐部教育副主席
-          2019.01—2019.12: 担任西子俱乐部主席
-          </text>
+      上下滑动更换即兴演讲题目，随时随地锻炼
+      双语演讲小程序存储了上千道各种类型的即兴题目，满足你所有的锻炼需求
+      
+      每道题目要求即兴回答，或者少量准备时间(小于30秒)。演讲时间建议控制在1到2分钟，少于1分钟或者多于2分钟均不符合要求
+      如果有对应的参考范文，左下角有圆点显示
+      点击下方的"分类"可以选择对应分类的题库
+    </text>
     <text decode="true" class="page__desc">
-          头马助手官方微信公众号:
-          </text>
-    <p bindtap='copyText' data-text="头马演讲助手" style="color:#8B0000">头马演讲助手
-      <text decode="true" class="page__desc">（点击复制）</text>
-    </p>
-    <text decode="true" class="page__desc">
-          头马演讲:
-          </text>
-    <p bindtap='naviTo' style="color:#8B0000">头马演讲
-      <text decode="true" class="page__desc">（点击直达）</text>
-    </p>
-    <text decode="true" class="page__desc">
-          合作及建议请加微信:
-          </text>
-    <p bindtap='saveOfficialQRCode' data-text="just_as_always" style="color:#8B0000">作者微信
-      <text decode="true" class="page__desc">（点击复制）</text>
-    </p>
-    <text decode="true" class="page__desc">
-          欢迎打赏:
-          </text>
-    <p bindtap='dashang' data-text="可能性工作室" style="color:#8B0000">打赏作者</p>
-    <text decode="true" class="page__desc">
-          个人微信公众号:
-          </text>
-    <p bindtap='copyText' data-text="可能性工作室" style="color:#8B0000">可能性工作室
-      <text decode="true" class="page__desc">（点击复制）</text>
-    </p>
-    <ad style="padding-top: 30rpx" unit-id="adunit-813951cfbc20472d"></ad>
+      Choose a speech topic from the list
+      Give yourself a strictly monitored preparation time of no more than 30 seconds. Deliver your speech aiming for at least 1 minute, no more than 2 minutes. 
+    </text>
+    <!-- <ad style="padding-top: 30rpx" unit-id="adunit-813951cfbc20472d"></ad> -->
   </view>
 </view>

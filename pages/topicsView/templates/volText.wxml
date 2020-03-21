@@ -1,0 +1,42 @@
+<template name="vol-item">
+  <!-- <navigator url="/pages/topics/topics?label={{item.label}}"> -->
+  <view class="vol-card">
+    <image class="vol-picture" src="{{item.image || '/images/jixing-min.jpeg'}}" mode="aspectFit"></image>
+    <view class="vol-content">
+      <text class="vol-content-text">{{item.title}}</text>
+    </view>
+  </view>
+  <!-- </navigator> -->
+
+  <view class="page">
+    <view class="page__bd">
+      <view class="weui-tab">
+        <view class="weui-navbar">
+          <!-- <block wx:for="{{tabs}}" wx:key="*this"> -->
+            <view class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+              <view class="weui-navbar__title page__desc">即兴问题</view>
+            </view>
+          <!-- </block> -->
+        </view>
+        <view class="weui-tab__panel">
+          <view class="weui-tab__content">
+            <view class="page__bd page__bd_spacing">
+              <view class="kind-list">
+                <block wx:for="{{item.topics}}">
+                  <view class="kind-list__item">
+                    <view class="weui-flex kind-list__item-hd">
+                      <view class="titleItem" style="">
+                        {{item}}
+                      </view>
+                    </view>
+                  </view>
+                </block>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</template>

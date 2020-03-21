@@ -1,0 +1,48 @@
+/* pages/knowledge/knowledge.wxss */
+
+.frame {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10rpx;
+  justify-content:flex-start;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.window3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* padding: 5rpx; */
+  justify-content:flex-start;
+}
+
+.box3 {
+  width: 20%;
+  height: 180rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.icon {
+  width:60rpx;
+  height:60rpx;
+}
+
+.downText {
+  font-size:30rpx;
+}
+
+.title {
+  color:#4F4F4F;
+  font-size:30rpx;
+  text-align:center;
+}

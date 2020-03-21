@@ -1,0 +1,51 @@
+/* pages/knowledge/knowledge.wxss */
+
+.frame {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10rpx;
+  justify-content:flex-start;
+}
+
+.box {
+  width: 22%;
+  height: 140rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 10rpx;
+}
+
+.banner {
+  width: 100%;
+}
+
+.swiper {
+  height: 30%;
+}
+
+.window3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10rpx;
+  justify-content:flex-start;
+}
+
+.box3 {
+  width: 30%;
+  height: 240rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 10rpx;
+}
+
+.downText {
+  font-size:30rpx;
+}

@@ -1,0 +1,26 @@
+/* pages/reading/reading.wxss */
+
+.cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  /* background-color: #F8F8F8; */
+  background-color: white;
+  height: 140rpx;
+  padding: 10rpx;
+}
+
+.card_text {
+  padding: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  font-size:15px;
+  color: #4F4F4F;
+  font-weight: bold;
+}

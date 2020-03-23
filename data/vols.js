@@ -14,10 +14,29 @@ module.exports = [
     hp_content: 'Do you like to go and stay in the same place for the whole vacation, or different places and spend short time at each place for your vacation?',
     hp_img_url: '',
     hp_model: [
-      'I like this topic, it’s about vacation and everyone likes vacation. When I was young, on my vacation I was always trying to go to as many places as possible because I want to see all the beautiful sceneries, all the wonderful places and I don't wanna miss a single place. However, when I grow older, I change my mind that I believe that staying in the same place for the whole vacation will lead to a better experience.',
+      'I like this topic, it’s about vacation and everyone likes vacation. When I was young, on my vacation I was always trying to go to as many places as possible because I want to see all the beautiful sceneries, all the wonderful places and I don’t wanna miss a single place. However, when I grow older, I change my mind that I believe that staying in the same place for the whole vacation will lead to a better experience.',
       'First, we must remember the purpose of vacation. It’s not about showing off for how many places we have been to, it’s about having a good rest, relaxing yourself and regaining energy. Staying in the same place saves us a lot of time on traffic and we won’t feel pushed to go to different places.',
       'Secondly, staying in the same place gives us enough time to feel every wonderful detail in travel. You can see the sun rise and sun set of the same city. You can find out the best restaurant and have a wonderful delicious meal there. You have enough time to talk with local residents about their daily life. If you choose to spend short time at different places, probably you have only time to take picture. You can’t have a deep understanding of local lifestyle.',
       'Moreover, those places we haven’t been to is not a pity, but a motivation that can attract us to back again. In a word, staying in the same place for the whole vacation will be a better choice.'
+    ]
+  },
+  {
+    hp_content: 'Do you like to prepare ahead of time, or do you like to put off the preparation right before the due date? Explain your reasons.',
+    hp_img_url: '',
+    hp_model: [
+ 	'I like to prepare ahead of time. According to my experience, when I was preparing for a test or an interview, something always happened against expectations. For example, when I was reading materials on my computer to prepare for the next day’s interview, out of the blue, my computer broke down. I couldn’t restart it that night and all my preparation was in vain. What if I started preparing 3 days in advance? The outcome would be totally different even though there was something unexpected. I believe Murphy\'s law, anything that can go wrong will go wrong. So we have to reserve some buffer time.',
+	'Secondly, I do not have confidence in my effectiveness of preparation. Sometimes I overestimate my ability, sometimes I underestimate the preparation workload, both of which will reduce the effectiveness. It is difficult to prepare right before the due date since you even cannot estimate your preparation time precisely.',
+	'So for me it’s natural to prepare ahead of time.'
+    ]
+  },
+  {
+    hp_content: 'Describe a way of life in your country that has changed. Do you think it is beneficial? Why?',
+    hp_img_url: '',
+    hp_model: [
+      'The world is changing fast, so is our way of life, especially the way of communication. When I was at my primary school, I used to write letters to my friends. I remember I wrote a letter to my teacher to express my gratitude when he left the school. Unexpectedly he wrote back to me to share his study experience. It made me an impression and it’s a wonderful memory.',
+      'Some years later, I got my first mobile phone. Of course it was not a smart phone. I could only use it to text messages to my friends and make phone call to my parents. Anyway, it brought me so much convenience. We could communicate even though we were far far away.',
+      'Then smart phone came out with so many communication apps on it, especially Wechat. Wechat is more interesting than message. You can send videos, images and emoji to your friends and make fun. You can make a video call to your parents and it make us feel closer.',
+      'The way of communication is becoming more and more convenient with less limitation and it inspire young people new lifestyles and inventions. In that case, it is beneficial for all of us. However, I still cherish the memory of those old fashioned ways of communication.'
     ]
   },
   {

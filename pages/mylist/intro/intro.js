@@ -34,6 +34,12 @@ Page({
     util.dashang()
   },
 
+  gotoGeizan: function (options) {
+    wx.previewImage({
+      urls: ["cloud://production-a65b5c.7072-production-a65b5c-1258290025/images/zanshang-min.jpeg"]
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

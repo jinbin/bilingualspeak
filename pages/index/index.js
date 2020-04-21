@@ -10,6 +10,7 @@ Page({
   data: {
     vols: require('../../data/vols'),
     challenge: require('../../data/challenge'),
+    is_challenge: false,
     current: 0,
     indicatorDots: true,
     vertical: false,
@@ -151,7 +152,12 @@ Page({
       banner_height: 240 / wx.getSystemInfoSync().windowHeight * 100
     })
 
-    console.log("begin")
+    if(options["challenge"]){
+      this.showChallenge("cn")
+      this.setData({
+        is_challenge: true
+      })
+    }
 
     wx.cloud.callFunction({
       name: "getTopics",
@@ -174,6 +180,9 @@ Page({
   showChallenge: function (lang){
     var today_num = util.getDays(new Date()) % this.data.challenge.length
     var that = this
+    that.setData({
+      is_challenge: true
+    })
     if(lang == "cn"){
       that.setData({
         content: "今日即兴演讲挑战\n题目: " + that.data.challenge[today_num][lang] + "\n规则: 思考时间不超过30秒(若可以直接作答更佳)，回答时间在1到2分钟，不得少于1分钟，多于2分30秒",
@@ -193,6 +202,9 @@ Page({
       confirmColor: '#ff7f50',
       success: function (res) {
         if (res.confirm) {
+          that.setData({
+            is_challenge: false
+          })
         }else{
           if(lang == "en"){
             that.showChallenge("cn")
@@ -266,9 +278,17 @@ Page({
   },
 
   onShareAppMessage: function () {
-    return {
-      title: '每天一道即兴演讲题，等你来挑战！',
-      imageUrl: '/images/today_challenge-min.jpeg'
+    if (this.data.is_challenge){
+      return {
+        title: '每天一道即兴演讲题，等你来挑战！',
+        imageUrl: '/images/today_challenge-min.jpeg',
+        query: "challenge=true"
+      }
+    }else{
+      return {
+        title: '每天一道即兴演讲题，等你来挑战！',
+        imageUrl: '/images/today_challenge-min.jpeg'
+      }
     }
   }
 })

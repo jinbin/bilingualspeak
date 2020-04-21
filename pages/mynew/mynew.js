@@ -80,6 +80,12 @@ Page({
     })
   },
 
+  gotoGeizan: function (options) {
+    wx.previewImage({
+      urls: ["cloud://production-a65b5c.7072-production-a65b5c-1258290025/images/zanshang-min.jpeg"]
+    })
+  },
+
   onShow: function (options) {
   },
 

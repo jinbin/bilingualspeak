@@ -9,6 +9,7 @@ const db = wx.cloud.database({
 Page({
   data: {
     vols: require('../../data/vols'),
+    challenge: require('../../data/challenge'),
     current: 0,
     indicatorDots: true,
     vertical: false,
@@ -30,7 +31,15 @@ Page({
         "url": "/images/tm_korea-min.jpg",
         "bind": "saveOfficialQRCode"
       }
-    ]
+    ],
+    // chanllege: {
+    //   "en": "If I sent you a Time Machine, and the Time Machine can bring you to your past. Which age do you want to go back and why?",
+    //   "cn": "你最喜欢哪一个城市，为什么？"
+    // } 
+  },
+
+  saveOfficialQRCode(){
+    util.saveOfficialQRCode("")
   },
 
   rotateFn(e) {
@@ -150,8 +159,47 @@ Page({
         console.log("getTopics")
         console.log(res.result.data)
         that.setData({
-          topics: res.result.data.reverse().slice(0, 9),
+          topics: res.result.data.reverse().slice(0, 14),
         })
+      }
+    })
+  },
+
+  show: function(event){
+    var lang = event.currentTarget.dataset.lang
+    //console.log("show: " + lang)
+    this.showChallenge(lang)
+  },
+
+  showChallenge: function (lang){
+    var today_num = util.getDays(new Date()) % this.data.challenge.length
+    var that = this
+    if(lang == "cn"){
+      that.setData({
+        content: "今日即兴演讲挑战\n题目: " + that.data.challenge[today_num][lang] + "\n规则: 思考时间不超过30秒(若可以直接作答更佳)，回答时间在1到2分钟，不得少于1分钟，多于2分30秒",
+        cancelText: "换英文"
+      })
+    }else{
+      that.setData({
+        content: "Impromptu Speech of Today\nQuestion: " + that.data.challenge[today_num][lang] + "\nRULE: You have no more than 30 seconds to prepare (better to speak without preparation), you will be disqualified if the speech is less than one minute or more than two minutes 30 seconds.",
+        cancelText: "换中文"
+      })
+    }
+    wx.showModal({
+      content: that.data.content,
+      showCancel: true,
+      cancelText: that.data.cancelText,
+      confirmText: "去答题",
+      confirmColor: '#ff7f50',
+      success: function (res) {
+        if (res.confirm) {
+        }else{
+          if(lang == "en"){
+            that.showChallenge("cn")
+          }else{
+            that.showChallenge("en")
+          }
+        }
       }
     })
   },
@@ -219,8 +267,8 @@ Page({
 
   onShareAppMessage: function () {
     return {
-      title: '我发现了一个即兴演讲的宝库，推荐你也看看',
-      imageUrl: '/images/jixing-big-min.jpeg'
+      title: '每天一道即兴演讲题，等你来挑战！',
+      imageUrl: '/images/today_challenge-min.jpeg'
     }
   }
 })

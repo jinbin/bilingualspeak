@@ -6,7 +6,7 @@
   <view class="userinfo">
     <open-data class="userinfo-avatar" type="userAvatarUrl" background-size="cover"></open-data>
   </view>
-  <image bindtap="navigateToMiniProgram" id="wx18a2ac992306a5a4" data-path="pages/apps/largess/detail?id=LYFYxTFDv9E%3D" src="/images/support-min.jpeg" style="height: 80px; width: 100%"/>
+  <image bindtap="gotoGeizan" src="/images/support-min.jpeg" style="height: 80px; width: 100%"/>
 </view>
 
 <official-account></official-account>
@@ -52,7 +52,7 @@
     <image style="width:80rpx;height:80rpx" src="../../images/setting7.png"></image> 
     <view style="font-size:12px;">关联小程序</view>
   </view>
-  <view class="box" bindtap="navigateToMiniProgram" id="wx18a2ac992306a5a4" data-path="pages/apps/largess/detail?id=LYFYxTFDv9E%3D">
+  <view class="box" bindtap="gotoGeizan">
     <image style="width:80rpx;height:80rpx" src="../../images/setting3.png"></image> 
     <view style="font-size:12px;">打赏作者</view>
   </view>

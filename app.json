@@ -19,8 +19,8 @@
   "window": {
     "backgroundTextStyle": "light",
     "backgroundColor": "#F8F8F8",
-    "navigationBarBackgroundColor": "#00CD66",
-    "navigationBarTitleText": "双语演讲",
+    "navigationBarBackgroundColor": "#87CEFA",
+    "navigationBarTitleText": "每天一道即兴演讲题",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

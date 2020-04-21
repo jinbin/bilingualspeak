@@ -21,6 +21,13 @@ function recordTime(date) {
   return [month, day].map(formatNumber).join('/') + ' ' + [hour, minute].map(formatNumber).join(':')
 }
 
+function getDays(date) {
+  var d1 = new Date(date.getFullYear(), 0, 0).getTime()
+  var d2 = new Date(date.getFullYear(), date.getMonth(), date.getDate()).getTime()
+  var d = Math.floor((d2 - d1) / (1000 * 60 * 60 * 24))
+  return d
+}
+
 const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
@@ -32,7 +39,7 @@ function saveOfficialQRCode(content) {
     content = "头马演讲助手"
   }
   wx.showModal({
-    content: '搜索"' + content + '"官方公众号, 获取小编诚意满满的福利！',
+    content: '搜索"' + content + '"官方公众号, 小编个人专属公众号！',
     showCancel: false,
     confirmText: '去关注',
     confirmColor: '#ff7f50',
@@ -75,5 +82,6 @@ module.exports = {
   recordTime: recordTime,
   saveOfficialQRCode: saveOfficialQRCode,
   giveTip: giveTip,
-  dashang: dashang
+  dashang: dashang,
+  getDays: getDays
 }

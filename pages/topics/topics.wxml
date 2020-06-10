@@ -43,7 +43,8 @@
         </navigator>
         <view class="line"></view>
         <view class="adContainer">
-          <ad unit-id="adunit-062625dfb1cfa617" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white"></ad>
+          <!-- <ad unit-id="adunit-062625dfb1cfa617" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white"></ad> -->
+          <ad unit-id="adunit-79515989b08573d4" ad-type="video" ad-theme="white"></ad>
         </view>
       </view>
     </view>

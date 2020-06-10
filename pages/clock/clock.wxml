@@ -1,0 +1,36 @@
+<view class="{{color}}">
+
+  <view class="container">
+    <view class="userinfo">
+      <view class="usermotto">{{xmin}}:{{xsec}}</view>
+      <view>
+        <picker mode="selector" range="{{time_all}}" value="{{index}}" bindchange="setTime">
+          <view class="configure">
+            <view>
+              <image style="width:20px; height:20px; padding-right:10px;" src="../../images/配置.png"></image>
+            </view>
+            <view style="font-size:16px">当前选择: {{time_all[index]}}</view>
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+  <view class="buttonArea">
+    <view>
+      <button wx:if="{{isStart == 0}}" class="weui-btn mini-btn" style="border:1px solid #DAA520;color:black; width:100px;background:#E6E6FA;" bindtap="startBtn" size="mini" plain="true">开始</button>
+      <button wx:if="{{isStart == 1}}" class="weui-btn mini-btn" style="border:1px solid #DAA520;color:black; width:100px;background:#E6E6FA;" bindtap="pauseBtn" size="mini" plain="true">暂停</button>
+    </view>
+    <view>
+      <button class="weui-btn mini-btn" style="border:1px solid #DAA520;color:black; width:100px;background:#E6E6FA;" bindtap="resetBtn" size="mini" plain="true">重置</button>
+    </view>
+  </view>
+
+  <view class="colorArea">
+    <view>
+      <!-- <button class="weui-btn mini-btn" style="border:1px solid #DAA520;color:#DAA520" bindtap="changebg" size="mini" type="primary" plain="true">自定义背景色 </button> -->
+      <image src="../../images/颜色.png" bindtap="changebg" style="padding-top:80px; width:40px; height:40px;"></image>
+    </view>
+  </view>
+
+</view>

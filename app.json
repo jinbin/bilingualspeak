@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/clock/clock",
     "pages/oldindex/index",
     "pages/volItem/volItem",
     "pages/collection/collection",
@@ -45,8 +46,7 @@
       }
     ]
   },
-  "plugins": {
-  },
+  "plugins": {},
   "navigateToMiniProgramAppIdList": [
     "wx16c76d4762cbe0b3",
     "wx18a2ac992306a5a4"

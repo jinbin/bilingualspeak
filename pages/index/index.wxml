@@ -13,13 +13,13 @@
 <view class="frame" style="">
   <view class="box4" bindtap="show" data-lang="cn">
     <view>
-      <image style="width:100rpx;height:100rpx;" src="../../images/中国.png"></image>
+      <image style="width:100rpx;height:100rpx;" src="../../images/china.png"></image>
     </view>
     <view class="downText_head">今日挑战</view>
   </view>
   <view class="box4" bindtap="show" data-lang="en">
     <view>
-      <image style="width:100rpx;height:100rpx;" src="../../images/英语.png"></image>
+      <image style="width:100rpx;height:100rpx;" src="../../images/english.png"></image>
     </view>
     <view class="downText" style="font-weight:bold">Chanllege of Today</view>
   </view>
@@ -46,7 +46,7 @@
             <view class="downText">全部话题</view>
           </navigator>
         </view>
-        <view class="box3" wx:for="{{topics}}" wx:for-index="idx">
+        <view class="box3" wx:for="{{topics}}" wx:key="id" wx:for-index="idx">
           <navigator url="/pages/topics/topics?label={{item.label}}&id={{item._id}}">
             <image class="icon" src="../../images/topics_color{{idx % 10}}.png"></image>
           </navigator>

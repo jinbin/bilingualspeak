@@ -146,17 +146,22 @@ Page({
 
   onLoad: function (options) {
 
+    //console.log("options: " + options["challenge"])
     var that = this
 
     this.setData({
       banner_height: 240 / wx.getSystemInfoSync().windowHeight * 100
     })
 
-    if(options["challenge"]){
+    console.log("options:")
+    console.log(options)
+    console.log("Hello ===: " + wx.getLaunchOptionsSync()["query"])
+    console.log(wx.getLaunchOptionsSync()["query"])
+
+    // 转发查询串可通过 wx.getLaunchOptionsSync() 或 wx.onShow() 获取启动参数中的 query
+    if (options["challenge"]){
+      console.log("HHHHH in")
       this.showChallenge("cn")
-      this.setData({
-        is_challenge: true
-      })
     }
 
     wx.cloud.callFunction({
@@ -165,7 +170,7 @@ Page({
         console.log("getTopics")
         console.log(res.result.data)
         that.setData({
-          topics: res.result.data.reverse().slice(0, 14),
+          topics: res.result.data.reverse().slice(0, 19),
         })
       }
     })
@@ -205,6 +210,9 @@ Page({
           that.setData({
             is_challenge: false
           })
+          // wx.navigateTo({
+          //   url: '/pages/clock/clock',
+          // })
         }else{
           if(lang == "en"){
             that.showChallenge("cn")
@@ -278,13 +286,17 @@ Page({
   },
 
   onShareAppMessage: function () {
+    console.log(this.data.is_challenge)
     if (this.data.is_challenge){
+      console.log("WWWWWWWW")
       return {
         title: '每天一道即兴演讲题，等你来挑战！',
         imageUrl: '/images/today_challenge-min.jpeg',
-        query: "challenge=true"
+        //query: "challenge=true",
+        path: 'pages/index/index?challenge=true'
       }
     }else{
+      console.log("WWWWWWWW111")
       return {
         title: '每天一道即兴演讲题，等你来挑战！',
         imageUrl: '/images/today_challenge-min.jpeg'
